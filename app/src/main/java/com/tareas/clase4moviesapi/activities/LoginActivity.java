@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.tareas.clase4moviesapi.R;
+import com.tareas.clase4moviesapi.util.SharedPref;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -44,6 +45,16 @@ public class LoginActivity extends AppCompatActivity {
         checkRecordarLogin= findViewById(R.id.checkRecordarLogin);
 
 
+
+
+        if(
+                !SharedPref.getKey(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_email)).isEmpty() &&
+                SharedPref.getKeyInteger(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_recordar))==1
+        ){
+            editCorreoLogin.setText(SharedPref.getKey(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_email)));
+            checkRecordarLogin.setChecked((SharedPref.getKeyInteger(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_recordar))==1?true:false));
+        }
+
         btnIngresarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +65,11 @@ public class LoginActivity extends AppCompatActivity {
                     Snackbar.make(LayoutLogin, getResources().getString(R.string.login_error_email), Snackbar.LENGTH_SHORT).show();
                 }
                 else{
+                    if(checkRecordarLogin.isChecked()) {
+                        SharedPref.setKey(getApplicationContext(), getResources().getString(R.string.login_shared_preference_key_email), editCorreoLogin.getText().toString());
+                        SharedPref.setKeyInt(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_recordar), (checkRecordarLogin.isChecked()?1:0)  );
+                    }
+
                     Intent i =  new Intent(getApplicationContext(),HomeActivity.class);
                     i.putExtra(PARAMETRO_1,editCorreoLogin.getText().toString());
                     startActivity(i);
@@ -62,8 +78,34 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        txtOlvidoLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,OlvidasteContrasenaActivity.class));
+                finish();
+            }
+        });
 
+        txtRegistrarLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,CrearCuentaActivity.class));
+                finish();
+            }
+        });
+        txtRegistrar2Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,CrearCuentaActivity.class));
+                finish();
+            }
+        });
 
-
+        checkRecordarLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPref.setKeyInt(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_recordar), (checkRecordarLogin.isChecked()?1:0)  );
+            }
+        });
     }
 }

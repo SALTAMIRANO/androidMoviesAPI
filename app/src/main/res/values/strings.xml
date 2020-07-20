@@ -9,7 +9,14 @@
     <string name="login_btn_text">Ingresar</string>
     <string name="login_crearcuenta_text">No tengo cuenta</string>
     <string name="login_crearcuenta_btn_text">Registrar</string>
-
     <string name="login_error_email">Debes ingresar correo</string>
     <string name="login_error_pw">Debes ingresar contraseña</string>
+
+    <string name="login_shared_preference_key_email">EMAIL</string>
+    <string name="login_shared_preference_key_recordar">EMAIL_RECORDAR</string>
+
+
+    <string name="home_cerrar_sesion_text">Esta seguro que desea cerrar la sesión?</string>
+
+
 </resources>
