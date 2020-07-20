@@ -5,6 +5,11 @@
     <string name="login_email_hint">Correo</string>
     <string name="login_contrasena_hint">Contraseña</string>
     <string name="login_contrasena_text">Olvidé mi contraseña</string>
+    <string name="login_check_text">Recordar</string>
+    <string name="login_btn_text">Ingresar</string>
+    <string name="login_crearcuenta_text">No tengo cuenta</string>
+    <string name="login_crearcuenta_btn_text">Registrar</string>
 
-
+    <string name="login_error_email">Debes ingresar correo</string>
+    <string name="login_error_pw">Debes ingresar contraseña</string>
 </resources>
