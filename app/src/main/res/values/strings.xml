@@ -22,4 +22,10 @@
     <string name="dialogs_btn_positive">SI</string>
     <string name="dialogs_btn_negative">NO</string>
 
+
+
+
+    <string name="json_name_movies">movies.json</string>
+    <string name="json_name_genre">genre.json</string>
+
 </resources>
