@@ -5,6 +5,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor">@color/colorDark1</item>
+        <item name="android:actionBarStyle">@color/colorDark2</item>
+        <item name="android:navigationBarColor">@color/colorDark1</item>
     </style>
 
 </resources>
