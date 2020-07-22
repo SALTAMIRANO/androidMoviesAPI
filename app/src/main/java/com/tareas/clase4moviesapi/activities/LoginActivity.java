@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.tareas.clase4moviesapi.R;
@@ -20,12 +19,12 @@ public class LoginActivity extends AppCompatActivity {
 
 
     final static String PARAMETRO_1 ="MAIL";
-    ConstraintLayout LayoutLogin;
+    ConstraintLayout layoutLogin;
     EditText editCorreoLogin;
-    EditText editPWLogin;
+    EditText editPwLogin;
     TextView txtOlvidoLogin;
     TextView txtRegistrarLogin;
-    TextView txtRegistrar2Login;
+    TextView txtRegistrarLoginLinkLogin;
     Button btnIngresarLogin;
     CheckBox checkRecordarLogin;
 
@@ -35,17 +34,14 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
 
-        LayoutLogin = findViewById(R.id.LayoutLogin);
+        layoutLogin = findViewById(R.id.layoutLogin);
         editCorreoLogin = findViewById(R.id.editCorreoLogin);
-        editPWLogin= findViewById(R.id.editPWLogin);
+        editPwLogin= findViewById(R.id.editPwLogin);
         txtOlvidoLogin= findViewById(R.id.txtOlvidoLogin);
         txtRegistrarLogin= findViewById(R.id.txtRegistrarLogin);
-        txtRegistrar2Login= findViewById(R.id.txtRegistrar2Login);
+        txtRegistrarLoginLinkLogin= findViewById(R.id.txtRegistrarLoginLinkLogin);
         btnIngresarLogin= findViewById(R.id.btnIngresarLogin);
         checkRecordarLogin= findViewById(R.id.checkRecordarLogin);
-
-
-
 
         if(
                 !SharedPref.getKey(getApplicationContext(),getResources().getString(R.string.login_shared_preference_key_email)).isEmpty() &&
@@ -59,10 +55,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(editCorreoLogin.getText().toString().isEmpty()){
-                Snackbar.make(LayoutLogin, getResources().getString(R.string.login_error_email), Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(layoutLogin, getResources().getString(R.string.login_error_email), Snackbar.LENGTH_SHORT).show();
                 }
-                else if(editPWLogin.getText().toString().isEmpty()){
-                    Snackbar.make(LayoutLogin, getResources().getString(R.string.login_error_email), Snackbar.LENGTH_SHORT).show();
+                else if(editPwLogin.getText().toString().isEmpty()){
+                    Snackbar.make(layoutLogin, getResources().getString(R.string.login_error_email), Snackbar.LENGTH_SHORT).show();
                 }
                 else{
                     if(checkRecordarLogin.isChecked()) {
@@ -81,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         txtOlvidoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,OlvidasteContrasenaActivity.class));
+                startActivity(new Intent(getApplicationContext(),OlvidasteContrasenaActivity.class));
                 finish();
             }
         });
@@ -89,14 +85,14 @@ public class LoginActivity extends AppCompatActivity {
         txtRegistrarLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,CrearCuentaActivity.class));
+                startActivity(new Intent(getApplicationContext(),CrearCuentaActivity.class));
                 finish();
             }
         });
-        txtRegistrar2Login.setOnClickListener(new View.OnClickListener() {
+        txtRegistrarLoginLinkLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,CrearCuentaActivity.class));
+                startActivity(new Intent(getApplicationContext(),CrearCuentaActivity.class));
                 finish();
             }
         });

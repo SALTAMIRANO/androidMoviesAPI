@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">MoviesApp</string>
+    <string name="app_name">Movies App</string>
 
-    <string name="login_title">Bienvenido a MoviesApp</string>
+    <string name="login_title">Bienvenido a Movies App</string>
     <string name="login_email_hint">Correo</string>
     <string name="login_contrasena_hint">Contraseña</string>
     <string name="login_contrasena_text">Olvidé mi contraseña</string>
@@ -18,5 +18,8 @@
 
     <string name="home_cerrar_sesion_text">Esta seguro que desea cerrar la sesión?</string>
 
+
+    <string name="dialogs_btn_positive">SI</string>
+    <string name="dialogs_btn_negative">NO</string>
 
 </resources>

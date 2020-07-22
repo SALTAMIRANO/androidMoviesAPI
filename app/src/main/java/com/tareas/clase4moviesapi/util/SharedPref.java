@@ -14,7 +14,13 @@ public class SharedPref {
     }
     public static String   getKey(Context context,String key){
         SharedPreferences pref = context.getSharedPreferences(sharedName,Context.MODE_PRIVATE);
-        return pref.getString(key, null);
+        try
+        {
+            return pref.getString(key, "");
+        }
+        catch (Exception ex){
+            return "";
+        }
     }
 
 

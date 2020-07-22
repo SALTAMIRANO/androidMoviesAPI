@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="font_xxl">32sp</dimen>
-    <dimen name="font_xl">28sp</dimen>
-    <dimen name="font_l">24sp</dimen>
-    <dimen name="font_m">20sp</dimen>
-    <dimen name="font_s">18sp</dimen>
     <dimen name="font_xs">12sp</dimen>
+    <dimen name="font_s">16sp</dimen>
+    <dimen name="font_m">20sp</dimen>
+    <dimen name="font_l">24sp</dimen>
+    <dimen name="font_xl">28sp</dimen>
+    <dimen name="font_xxl">32sp</dimen>
+
+    <dimen name="m_zero">0dp</dimen>
+    <dimen name="m_xs">4dp</dimen>
+    <dimen name="m_s">8dp</dimen>
+    <dimen name="m_m">16dp</dimen>
+    <dimen name="m_l">24dp</dimen>
+    <dimen name="m_xl">32dp</dimen>
+    <dimen name="m_xxl">40dp</dimen>
+
+    <dimen name="login_icon_w">152dp</dimen>
+    <dimen name="login_icon_h">180dp</dimen>
+
+
+
 </resources>

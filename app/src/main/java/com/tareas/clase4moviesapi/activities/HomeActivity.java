@@ -22,18 +22,18 @@ public class HomeActivity extends AppCompatActivity {
         confirmCerrarSesion();
     }
     public void confirmCerrarSesion() {
-        //SNACKBAR
+
         new AlertDialog.Builder(this)
                 .setMessage(R.string.home_cerrar_sesion_text)
                 .setCancelable(false)
-                .setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.dialogs_btn_positive , new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
 
                         startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                         finish();
                     }
                 })
-                .setNegativeButton("NO", null)
+                .setNegativeButton(R.string.dialogs_btn_negative, null)
                 .show();
     }
 }
