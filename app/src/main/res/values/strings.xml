@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">clase4MoviesAPI</string>
+    <string name="app_name">Movies App</string>
+
+    <string name="login_title">Bienvenido a Movies App</string>
+    <string name="login_email_hint">Correo</string>
+    <string name="login_contrasena_hint">Contraseña</string>
+    <string name="login_contrasena_text">Olvidé mi contraseña</string>
+    <string name="login_check_text">Recordar</string>
+    <string name="login_btn_text">Ingresar</string>
+    <string name="login_crearcuenta_text">No tengo cuenta</string>
+    <string name="login_crearcuenta_btn_text">Registrar</string>
+    <string name="login_error_email">Debes ingresar correo</string>
+    <string name="login_error_pw">Debes ingresar contraseña</string>
+
+    <string name="login_shared_preference_key_email">EMAIL</string>
+    <string name="login_shared_preference_key_recordar">EMAIL_RECORDAR</string>
+
+
+    <string name="home_cerrar_sesion_text">Esta seguro que desea cerrar la sesión?</string>
+    <string name="home_title">TOP DE PELICULAS</string>
+
+
+    <string name="dialogs_btn_positive">SI</string>
+    <string name="dialogs_btn_negative">NO</string>
+
+
+    <string name="json_name_movies">movies.json</string>
+    <string name="json_name_actors">actors.json</string>
+    <string name="json_url_base_images">http://image.tmdb.org/t/p/w300/</string>
 </resources>
