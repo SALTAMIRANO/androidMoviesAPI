@@ -4,6 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDark1"
     tools:context=".activities.HomeActivity">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reciclerViewHome"
+        android:layout_width="@dimen/m_zero"
+        android:layout_height="@dimen/m_zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="2"
+        tools:listitem="@layout/layout_item_home"
+
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

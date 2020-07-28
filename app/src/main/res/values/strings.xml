@@ -17,9 +17,14 @@
 
 
     <string name="home_cerrar_sesion_text">Esta seguro que desea cerrar la sesión?</string>
+    <string name="home_title">TOP DE PELICULAS</string>
 
 
     <string name="dialogs_btn_positive">SI</string>
     <string name="dialogs_btn_negative">NO</string>
 
+
+    <string name="json_name_movies">movies.json</string>
+    <string name="json_name_actors">actors.json</string>
+    <string name="json_url_base_images">http://image.tmdb.org/t/p/w300/</string>
 </resources>
